@@ -54,7 +54,7 @@ def learn_class_attributes():
     print(f'point_a.color = {point_a.color}')
     print(f'point_b.color = {point_b.color}\n')
 
-    # If we change some attribute in class. Then every attribute an instances will be changed
+    # If we change some attribute in class. Then every attribute in instances will be changed
     Point.color = '#cb3457'
     print(f'point_a.color = {point_a.color}')
     print(f'point_b.color = {point_b.color}\n')
@@ -94,6 +94,10 @@ def learn_class_attributes():
     print(hasattr(Point, 'name'))
     print(hasattr(point_a, 'name'))
     print(hasattr(point_b, 'circle'))
+
+    if hasattr(point_a, 'name'):
+        delattr(point_a, 'name')
+        print('The "name" attribute has been successfully deleted from point_a instance')
 
 
 if __name__ == '__main__':
